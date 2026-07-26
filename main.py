@@ -39,12 +39,11 @@ def main_kb():
 async def cmd_start(message: types.Message):
     await message.answer(
         f"👋 Привет, {message.from_user.first_name}!\n\n"
-        f"Добро пожаловать в наш магазин **Telegram Stars & NFT**!\n"
-        f"Здесь вы можете быстро приобрести звёзды и цифровые товары с оплатой по СБП / Сбербанк.",
+        f"Добро пожаловать в наш магазин *Telegram Stars*! ⭐\n"
+        f"Здесь вы можете быстро приобрести звёзды с удобной оплатой по СБП / Сбербанк.",
         parse_mode="Markdown",
         reply_markup=main_kb(),
     )
-
 
 @dp.message(F.text == "ℹ️ О нас / Помощь")
 async def process_about(message: types.Message):
